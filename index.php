@@ -19,7 +19,7 @@ add_action('admin_menu', 'register_featured_image_sync_menu');
 function render_featured_image_sync_page() {
   echo '<div class="wrap">
       <h1>Featured Image Synchronization</h1>
-      <p>Click the button below to update all featured images from <strong>mtchdevimport.wpenginepowered.com</strong>.</p>
+      <p>Click the button below to update all featured images from <strong>Site</strong>.</p>
       <form method="post">
           <input type="hidden" name="sync_featured_images" value="1">
           <button type="submit" class="button button-primary">Update Images</button>
@@ -36,7 +36,7 @@ function render_featured_image_sync_page() {
 }
 
 function sync_all_featured_images($batch_size = 10) {
-  $source_domain = 'https://mtchdevimport.wpenginepowered.com';
+  $source_domain = 'site';
 
   if (!function_exists('media_sideload_image')) {
       require_once ABSPATH . 'wp-admin/includes/media.php';
